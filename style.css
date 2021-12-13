@@ -1,0 +1,155 @@
+:root {
+  /* ### Primary */
+
+  --SoftBlue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+
+  --VeryDarkBlueMainBack: hsl(217, 54%, 11%); /* (main BG) */
+  --VeryDarkBlueCardBack: hsl(216, 50%, 16%); /* (card BG) */
+  --VeryDarkBlueLine: hsl(215, 32%, 27%); /* (line) */
+  --White: hsl(0, 0%, 100%);
+
+  /* Font Weights */
+
+  --font300: 300;
+  --font400: 400;
+  --font600: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--VeryDarkBlueMainBack);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+}
+h4 {
+  font-size: 1.3rem;
+  font-weight: var(--font600);
+  color: var(--White);
+  margin: 10px 0px 10px -2px;
+  cursor: pointer;
+}
+h4:hover {
+  color: var(--Cyan);
+}
+p {
+  font-size: 1.125rem;
+  font-weight: var(--font300);
+  color: var(--SoftBlue);
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: var(--VeryDarkBlueLine);
+}
+.bgMain {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Cyan);
+  cursor: pointer;
+}
+.overlay:hover::before {
+  transition: all 1.5s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 84%;
+  height: 52%;
+  background: var(--Cyan);
+  opacity: 0.6;
+  border-radius: 10px;
+}
+.overlay:hover::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 180px;
+  left: 180px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background: url(images/icon-view.svg);
+  z-index: 1;
+}
+.container {
+  max-width: 1440px;
+  position: relative;
+}
+.card {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  background: var(--VeryDarkBlueCardBack);
+  padding: 2rem;
+  border-radius: 10px;
+  border:none;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.875rem 0 1.875rem 0;
+}
+.etherum {
+  color: var(--Cyan);
+  font-weight: var(--font600);
+}
+.etherum::before {
+  content: "";
+  display: block;
+  background: url(images/icon-ethereum.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 20px;
+  float: left;
+  margin-right: 3px;
+}
+
+.clock {
+  color: var(--White);
+  font-weight: var(--font300);
+}
+.clock::before {
+  content: "";
+  display: block;
+  background: url(images/icon-clock.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 20px;
+  float: left;
+  margin: 3px 7px 0px 0px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  column-gap: 0.938rem;
+  margin-top: 1.25rem;
+}
+.profile img {
+  width: 50px;
+}
+.profile img {
+  width: 50px;
+}
+strong {
+  color: var(--White);
+  cursor: pointer;
+}
+strong:hover {
+  color: var(--Cyan);
+}
